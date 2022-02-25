@@ -66,17 +66,7 @@ p.error {
 </head
 </body>
 <h1> login page</h1>
-<form method="post" action="loginfunc.php">
-
-<div class = "form-element">
-<label>Select Country</label>
-<select name="country ">
-	<option value="Nig"> Nigeria </option>
-	<option value="Us"> United State</option>
-	<option value="Can"> Canada </option>
-</select> <br> 
-    
-</div>
+<form method="post" action="studuentform.php">
 
   <div class="form-element">
       
