@@ -25,8 +25,11 @@ $apple = new Fruits();
 $mm = $apple->set_color('green');
 $kk = $apple->set_name('mango');
 echo "<br>";
-$apple->set_color('green');
+
 echo $mm;
+echo "<br>";
+
+ echo $kk;
 
 
 ?>
