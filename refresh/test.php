@@ -17,7 +17,7 @@ function set_name(){
     return $this->name;
 }
 
-function get_color($color){
+function get_color(){
     $value = "the name of this color is";
     return $this->color.$value;
 }
@@ -32,7 +32,8 @@ function another_function(){
 $cc = new test('mikky', 'blue');
 
 echo($cc->set_name());
-echo($cc->get_color('color'));
+echo($cc->get_color());
+echo($cc->another_function());
 
 
 
