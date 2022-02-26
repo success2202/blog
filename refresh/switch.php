@@ -20,6 +20,7 @@ echo name;
     //         $array = ["kachi", "yabatech", "computer science"];
     //         print_r($array);
     //         break;
+    
     //     case 30: 
     //         /////lines of code
     //         echo "this is wrong";
