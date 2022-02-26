@@ -10,21 +10,23 @@ public $color;
 
 function set_name($name){
 
-    return $this->name = $name;
+    $cc = $this->name = $name;
+    return $cc;
+
 }
 
 function set_color($color){
-    return $this->color = $color;
+    return $color;
 }
 }
 
 $apple = new Fruits();
 
-$apple->set_color('green');
-$apple->set_name('mango');
+$mm = $apple->set_color('green');
+$kk = $apple->set_name('mango');
 echo "<br>";
 $apple->set_color('green');
- 
+echo $mm;
 
 
 ?>
