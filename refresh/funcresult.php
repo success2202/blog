@@ -15,7 +15,10 @@ function funcal($no1, $no2, $operator, $result = null){
                 break;
                 case 'mult':
                     $result = $no1 * $no2;
-                break;             
+                break;        
+                case 'div':
+                    $result = $no1 / $no2;
+                break;       
     }
 
     return $result;
