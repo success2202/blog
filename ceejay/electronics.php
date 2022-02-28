@@ -29,11 +29,11 @@ $e_use = $television ->ElectronUse('it is use for watching movies');
 $e_price = $television ->ElectronPrice('the current price is 200000 thousand naira');
 echo "this is the television details";
 echo "<br>";
-echo "$e_name";
+echo $e_name;
 echo "<br>";
-echo "$e_color";
+echo $e_color;
 echo "<br>";
-echo "$e_use";
+echo $e_use;
 echo "<br>";
-echo "$e_price";
+echo $e_price;
 ?>
