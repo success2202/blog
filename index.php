@@ -1,25 +1,23 @@
 
-<?php
-echo "lets start tutorial"
 
+<!DOCTYPE html>
+<html>
 
-<?php 
-
-echo "lets start tutorial";
-
-echo "<br>";
-
-?>
+<head>
 
 
 
+</head>
 
-<?="this is php echo shortcut" ?>
 
-<?
+<body>
+
+
+
+</body>
 
 
 
 
 
-?>
+</html>
