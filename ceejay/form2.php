@@ -3,7 +3,7 @@
 
 class form2{
 
-public $username;
+public $username; 
 public $password;
 
 
