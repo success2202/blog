@@ -25,6 +25,8 @@
 	ul.pages{padding-left:2em; list-style:square;}
 	.selected {font-weight:bolder; color:#fff;}
 	.content{font-style:italic; font-size:14px;}
+
+
 	
 	/*page content*/
 	#page {padding-left:2em; vertical-align:top; background:#EEE489;}
