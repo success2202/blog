@@ -1,5 +1,4 @@
-<html>
-<body>	
+
 	<div id="footer">Copyright <?= date('Y') ?>, CMS Application</div>
 
 <?php 
@@ -9,4 +8,4 @@ mysqli_close($con);
 }
 ?>
 </html>
-</body>
+</body>	

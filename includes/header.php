@@ -1,10 +1,10 @@
-<?php include("includes/db_connect.php"); ?>
+<?php include("includes/core/db_connect.php"); ?>
 <!DOCTYPE HMTL>
 <html>
 <head>
 
 <title>CMS Application</title>
-<link href="stylesheet/public.css" rel="stylesheet" media="all"  type="text/css"/>
+<link href="assets/stylesheet/public.css" rel="stylesheet" media="all"  type="text/css"/>
 </head>
 <body>
 
