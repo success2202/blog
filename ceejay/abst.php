@@ -2,7 +2,7 @@
 abstract class fruits{
 public $name, $color;
 
-function  __construct($name,){
+function  __construct($name){
     $this->name=$name;
     
 }

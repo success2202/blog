@@ -12,8 +12,6 @@ class accessfunc{
         
     }
 
-
-
     protected function get_name(){
         return $this->name  = "my name is muchael";
     }

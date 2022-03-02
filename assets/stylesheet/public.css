@@ -1,0 +1,35 @@
+/*site colors:
+	#1A446c - blue grey
+	#689DC1 - light blue
+	#DAE6F4 - very light blue
+	#EEE489 - light tan
+	#8DOD19 - burgundy
+	
+	*/
+	html{ height:100%; width:100%;}
+	body{width:100%; height:100%; margin:0px; padding:0px; border:0px;
+	font-family:verdena, Arial, Helvetica, Sans-serif; background:#DE6F4; font-size:13px; line-height:15px;}
+	img{border:none;}
+	table, tr, td{ border-collapse:collapse; vertical-align:top; font-size:13px; line-height:15px;}
+	a{color:#8DOD19;}
+	#header{height:70px; margin:0px; padding:0px; text-align:left; background:#1A446C; color:#DAE6F4;}
+	#header h1{padding:1em; margin:0px;}
+	#main{margin:0px;padding:0px;height:600px;width:100%; background:#EEE489;}
+	#structure{height:600px; width:100%;}
+	#footer{height:2em;margin:0px;padding:1em;text-align:center;background:#1A446C; color:#DAE6F4;}
+	
+	/*navigation*/
+	#navigation{width:150px; padding:1em 2em; color:#DAE6F4; background:darkred;}
+	#navigation a{color:#DAE6F4; text-decoration:none;}
+	ul.subjects{padding-left:0; list-style:none;}
+	ul.pages{padding-left:2em; list-style:square;}
+	.selected {font-weight:bolder; color:#fff;}
+	.content{font-style:italic; font-size:14px;}
+	
+	/*page content*/
+	#page {padding-left:2em; vertical-align:top; background:#EEE489;}
+	#page h2{color:darkred; margin-top:1em; font-size:25px;}
+	#page h3{color: #8DOD19;}
+	#page p{font-size:1em}
+	#page a{color:darkred; text-decoration:;font-size:1em;}
+	.message {color:#EFE; font-weight:bold;}
