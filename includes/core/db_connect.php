@@ -3,7 +3,7 @@
 $con = mysqli_connect("localhost", "root", "", "cms");
 
 if(!$con){
-        echo "connection failed".mysqli_errno();
+        echo "connection failed".  mysqli_connect_error();
 }
 
 
