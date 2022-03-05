@@ -1,9 +1,10 @@
 
 <?php include("includes/header.php");?>
+<?php include("includes/func.php");?>
 <table id="structure">
 	<tr>
 		<td id="navigation">
-			
+		<?= navigation(); ?>
 		&nbsp;
 		</td>
 		<td id="page">
