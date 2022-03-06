@@ -19,12 +19,3 @@ ini_set('display_errors', 'on');
 </div>
 <div id="main">
 
-	<?php 
-
-	if(!isset($username))
-	{
-	 
-         
-     
-	}
-	?>
