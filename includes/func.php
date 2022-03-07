@@ -15,13 +15,12 @@ function get_pages_for_subject($id){
 }
 
 function navigation(){
-        global $con;
-       
         $output =  "<ul class=\"subjects\">";
         $chk = get_all_subjects();
         while($subj_set = mysqli_fetch_assoc($chk)){
             $id = $subj_set['id'];
-          $output .= "<li>".$subj_set['menu_name'];
+          $output .= "<li > <a href=\"subjects.php?subj_id=$id\">".$subj_set['menu_name']."</a>"; 
+
           $output .= "<ul class=\"pages\">";
           $chks = get_pages_for_subject($id);
             while($pages = mysqli_fetch_assoc($chks)){

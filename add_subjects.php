@@ -35,7 +35,7 @@
 <p> Visibility:
     
     Yes<input type="radio" name="visible" class="form-control" value="1">
-    No<input type="radio" name="visible" class="form-control" value="2"></p>
+    No<input type="radio" name="visible" class="form-control" value="0"></p>
 
 
 <p> <input type="submit" value="Save Subject"> </p>
