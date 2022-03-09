@@ -7,7 +7,7 @@ $visible = $_POST['visible'];
 $content = $_POST['content'];
 $subj_id = $_POST['subject_id'];
 
-$sql = "INSERT INTO pages VALUES(NULL, $subj_id, '$name', '$content',$position, $visible)";
+$sql = "INSERT INTO pages VALUES(NULL, $subj_id, '$name',$position, $visible, '$content')";
 $chks = mysqli_query($con, $sql);
 
 if($chks){?>
@@ -16,10 +16,7 @@ if($chks){?>
     window.location = "index.php";
     </script>
 <?php
-
-
 }else{?>
-
     <script>
         window.location = "add_page.php?subj_id=1";
         </script>

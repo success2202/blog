@@ -24,7 +24,8 @@ function navigation(){
           $output .= "<ul class=\"pages\">";
           $chks = get_pages_for_subject($id);
             while($pages = mysqli_fetch_assoc($chks)){
-                $output .= "<li>". $pages['menu_name']."</li>";
+              $ids = $pages['id']; 
+                $output .= "<li> <a href=\"pages.php?page_id=$ids \">". $pages['menu_name']." </a> </li> ";
             }
           $output .="</ul>";
            $output .= "</li>";
@@ -34,6 +35,7 @@ $output .= "</ul>";
 }
 
 
+  
     
 
 ?>
