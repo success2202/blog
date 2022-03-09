@@ -5,7 +5,8 @@ $name = $_POST['menu_name'];
 $position = $_POST['position'];
 $visible = $_POST['visible'];
 $content = $_POST['content'];
-$subj_id = $_POST['subject_id'];
+$page_id = $_POST['page_id'];
+
 
 function Insert($subj_id, $name,$position, $visible, $content, $con){
 $sql = "INSERT INTO pages VALUES(NULL, $subj_id, '$name',$position, $visible, '$content')";
@@ -25,17 +26,22 @@ if($chks){?>
 }
 }
 
-function Update($page_id, $name,$position, $visible, $content, $con){
-    $sql = "UPDATE pages SET `id`=NULL,  NULL, '$name',$position, $visible, '$content')";
+
+
+function Update($name,$position, $visible, $content, $page_id){
+    global $con;
+    // var_dump($page_id);
+    // die();
+    $sql = "UPDATE pages SET  `menu_name`='$name',`position`=$position,`visible`=$visible,`content`='$content' WHERE `id`=$page_id";
     $chks = mysqli_query($con, $sql);
-    
     if($chks){?>
-    
     <script>
         window.location = "index.php";
         </script>
     <?php
-    }else{?>
+    }else{
+        ?>
+    
         <script>
             window.location = "add_page.php?subj_id=1";
             </script>
@@ -47,9 +53,11 @@ if(isset($_POST['add'])){
 }
 
 if(isset($_POST['update'])){
-
-    Update($subj_id, $name,$position, $visible, $content, $con);
+    //   var_dump($name.$position.$visible.$content.$page_id);
+    //  die();
+    Update($name,$position, $visible, $content, $page_id);
 }
+
 
 
 

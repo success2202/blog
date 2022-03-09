@@ -46,11 +46,23 @@ $page = mysqli_fetch_assoc($page_chk);
 <p>
 
 <input type="hidden" name="page_id" value="<?= $page['id']?>">
+<input type="hidden" name="subject_id" value="">
+<input type="hidden" name="update" value="update">
 <textarea rows="20" cols="50" name="content" placeholder="enter contents here">  <?=  $page['content'] ?> </textarea>
      </p>
 
-<p> <input type="submit" value="update Page"> </p> 
+<p> <input type="submit" value="update Page">  
+
+    
+
+</p> 
 </form>
+
+<form action="delete_page.php" method="post">
+        <input type="hidden" name="pages_id" value="<?= $page['id']?>">
+        <input type="submit" value="Delete Page" onclick="return confirm('Are you sure')"> 
+
+    </form>
 
 
 

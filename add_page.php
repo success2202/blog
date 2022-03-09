@@ -46,6 +46,7 @@ $subj = mysqli_fetch_assoc($subj_chk);
 <p>
 
 <input type="hidden" name="subject_id" value="<?= $subj['id']?>">
+<input type="hidden" name="add" value="add">
 <textarea rows="20" cols="50" name="content" placeholder="enter contents here"> </textarea>
      </p>
 
