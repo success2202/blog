@@ -3,7 +3,10 @@ include('includes/core/db_connect.php');
 $name= $_POST['name'];
 $position= $_POST['position'];
 $visible = $_POST['visible'];
-$sql = "INSERT INTO subjects VALUES(NULL, '$name', $position, $visible)";
+
+
+function Insert($subject_id, $name,$position, $visible, $con){
+    $sql = "INSERT INTO subjects VALUES(NULL, '$name', $position, $visible)";
 //$sql = "INSERT INTO subjects(`id`, `menu_name`, `position`, `visible`) VALUES(NULL, '$name', $position, $visible)";
 $chk = mysqli_query($con, $sql);
 if(!$chk){
@@ -12,7 +15,9 @@ if(!$chk){
     <script>
     window.location = "index.php";
 </script>
-    <?php } 
+    <?php }
+}
+ 
     
     
     

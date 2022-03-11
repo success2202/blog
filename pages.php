@@ -1,10 +1,7 @@
 <?php include("includes/header.php");?>
 <?php include("includes/func.php");?>
-
 <?php 
-
 $page_id = $_GET['page_id'];
-
 $pages = "SELECT * FROM pages WHERE id=$page_id LIMIT 1";
 $page_chk = mysqli_query($con, $pages);
 $page = mysqli_fetch_assoc($page_chk);
@@ -15,9 +12,7 @@ $page = mysqli_fetch_assoc($page_chk);
 <tr>
 
 <td id="navigation">
-
 <?= navigation(); ?>
-
     <a href="add_subjects.php"> Add New Subject
 </td>
 
@@ -52,30 +47,16 @@ $page = mysqli_fetch_assoc($page_chk);
      </p>
 
 <p> <input type="submit" value="update Page">  
-
-    
-
 </p> 
 </form>
 
-<form action="delete_page.php" method="post">
+    <form action="delete_page.php" method="post">
         <input type="hidden" name="pages_id" value="<?= $page['id']?>">
         <input type="submit" value="Delete Page" onclick="return confirm('Are you sure')"> 
-
     </form>
 
-
-
-
-
 </td>
-
-
-
-
 </tr>
-
-
 </table>
 
 
