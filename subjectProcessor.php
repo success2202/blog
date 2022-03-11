@@ -5,8 +5,6 @@ $subject_id = $_POST['subj_id'];
 $position= $_POST['position'];
 $visible = $_POST['visible'];
 
-
-
 function Insert($name,$position, $visible, $con){
     $sql = "INSERT INTO subjects VALUES(NULL, '$name', $position, $visible)";
 //$sql = "INSERT INTO subjects(`id`, `menu_name`, `position`, `visible`) VALUES(NULL, '$name', $position, $visible)";
@@ -45,12 +43,13 @@ if(!$chk){
         }
     
         if(isset($_POST['add'])){
-            Insert($subject_id, $name,$position, $visible, $con);   
+            // var_dump($name."position:".$position."visible = ".$visible.$_POST['subj_id'].$_POST['add']);
+            // die();
+            Insert($name,$position, $visible, $con);   
         }
         
         if(isset($_POST['update'])){
-          //   var_dump($name."position:".$position."visible = ".$visible. "subject_id".$subject_id);
-          //   die();
+         
             Update($name,$position, $visible, $subject_id);
         }
         

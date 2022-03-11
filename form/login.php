@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,18 +15,23 @@
 		<div class="login-box">
             <div class="col-md=6 login-left">
 				<h2>Login Here</h2>
-				<form action="validate.php" method="post">
+				<form action="../UserProcessor.php" method="post">
 					<div class="form-group">
 						<label>Username</label>
-						<input type="text" name="user" class="form-control" required>
+						<input type="text" name="username" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label>Password</label>
-						<input type="password" name="password" class="form-control" required>
+						<input type="password" name="pass" class="form-control" required>
 					</div>
+					<input type="hidden" name="form_type" value="login">
 <button type="submit" class="btn btn-primary">Login</button>
  <a href="register.php"> Sign Up</a>
+
+
 				</form>
+				<?php if(isset($_SESSION['error'])) { ?><span style="color:#fff; background:red"> <?=$_SESSION['error'] ?> <?php }?></span>
+					
 			</div>
             </div>
 

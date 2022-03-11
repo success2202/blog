@@ -1,4 +1,8 @@
-<?php include("includes/core/db_connect.php"); 
+<?php 
+session_start();
+include("includes/core/db_connect.php"); 
+
+include('includes/auth.php');
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
@@ -15,7 +19,10 @@ ini_set('display_errors', 'on');
 <body>
 
 <div id="header">
-<h1><a  style="text-decoration:none; color:#EEE" href="contents.php">CMS Application</a></h1>
+<h1><a  style="text-decoration:none; color:#EEE" href="contents.php">CMS Application</a>
+<span style="float:right"> <a style="text-decoration:none; font-size:15px; color:#EEE" href="logout.php">Logout Here </a></span>
+</h1>
+
 </div>
 <div id="main">
 

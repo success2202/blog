@@ -38,8 +38,8 @@
     No<input type="radio" name="visible" class="form-control" value="0"></p>
 
 
- 
-    
+ <input name="subj_id" type="hidden">
+ <input name="add"  type="hidden">
 <p> <input type="submit" value="Save Subject"> </p>
 </form>
 
