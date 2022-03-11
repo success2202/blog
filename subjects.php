@@ -26,36 +26,28 @@ $subj = mysqli_fetch_assoc($subj_chk);
 
 <h2>  <?=  $subj['menu_name'] ?> Details</h2>
 
-<form action="subjectProcessor.php" method="post">
-<p>Subject Name: <input type="text" value="<?= $subj['menu_name'] ?>" name="name" class="form-control" placeholder="subject name"> 
+<p>Subject Name: <input type="text" value="<?= $subj['menu_name'] ?>" name="name" class="form-control" placeholder="subject name" readonly> 
 </p>
-<p>Position: <select name="position"> 
+<p>Position: <select name="position" readonly> 
     <option>  <?=  $subj['position'] ?> </option>
 </select> </p>
 <p> Visibility:
-    Yes<input type="radio" name="visible" class="form-control" value="1" <?php if($subj['visible'] == 1) {?> checked <?php }?> >
-    No<input type="radio" name="visible" class="form-control" value="0" <?php if($subj['visible'] == 0) {?> checked <?php }?>></p>
+    Yes<input type="radio" name="visible" class="form-control" value="1" <?php if($subj['visible'] == 1) {?> checked <?php }?> readonly>
+    No<input type="radio" name="visible" class="form-control" value="0" <?php if($subj['visible'] == 0) {?> checked <?php }?> readonly></p>
 
 
-<p> <input type="submit" value="Edit Subject">  <a href="add_page.php?subj_id=<?= $subj['id']?> "> Add Pages to subject </a></p> 
+<p> <a href="update_subject.php?subj_id=<?=$subject_id ?> ">  Edit Subject </a>  <br> </p> 
 
 <!--  -->
 
 <!-- update form -->
 
-
-<input type="hidden" name="subject_id" value="<?= $page['id']?>">
-<input type="hidden" name="page_id" value="">
-<input type="hidden" name="update" value="update">
-     </p>
-<p> <input type="submit" value="update subject"> </p> 
-</form>
 <!-- delete form -->
 <form action="delete_subject.php" method="post">
 <input type="hidden" name="subj_id" value="<?= $subj['id']?>">
         <input type="submit" value="Delete subject" onclick="return confirm('Are you sure')"> 
 </form>
-
+<p> <a href="add_page.php?subj_id=<?= $subj['id']?> "> Add Pages to subject </a></p>
 
 
 

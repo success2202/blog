@@ -1,11 +1,13 @@
 <?php
 include('includes/core/db_connect.php');
 $name= $_POST['name'];
+$subject_id = $_POST['subj_id'];
 $position= $_POST['position'];
 $visible = $_POST['visible'];
 
 
-function Insert($subject_id, $name,$position, $visible, $con){
+
+function Insert($name,$position, $visible, $con){
     $sql = "INSERT INTO subjects VALUES(NULL, '$name', $position, $visible)";
 //$sql = "INSERT INTO subjects(`id`, `menu_name`, `position`, `visible`) VALUES(NULL, '$name', $position, $visible)";
 $chk = mysqli_query($con, $sql);
@@ -17,19 +19,16 @@ if(!$chk){
 </script>
     <?php }
 }
- 
-    
-    
     
     //update subject function
-
-
     function Update($name,$position, $visible, $subject_id){
         global $con;
         // var_dump($page_id);
         // die();
-        $sql = "UPDATE subjects SET  `menu_name`='$name',`position`=$position WHERE `id`=$subject_id";
+        $sql = "UPDATE subjects SET  `menu_name`='$name',`position`=$position, `visible`=$visible WHERE `id`=$subject_id";
         $chks = mysqli_query($con, $sql);
+      //  var_dump($chks);
+       //  die();
         if($chks){?>
         <script>
             window.location = "index.php";
@@ -50,8 +49,8 @@ if(!$chk){
         }
         
         if(isset($_POST['update'])){
-            //   var_dump($name.$position.$visible.$content.$page_id);
-            //  die();
+          //   var_dump($name."position:".$position."visible = ".$visible. "subject_id".$subject_id);
+          //   die();
             Update($name,$position, $visible, $subject_id);
         }
         
