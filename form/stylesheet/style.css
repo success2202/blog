@@ -1,0 +1,18 @@
+body{
+    background-color: hotpink;
+    background-size: cover;
+    background-position: cer;
+}
+.login-box{
+    max-width: 700px;
+    float: none;
+    margin: 150px auto;
+}
+.login-right{
+    background: rgb(240, 233, 233);
+    padding: 10px;
+}
+.login-left{
+    background: rgb(240, 225, 225);
+    padding: 10px;
+}
