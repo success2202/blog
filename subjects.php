@@ -38,6 +38,22 @@ $subj = mysqli_fetch_assoc($subj_chk);
 
 
 <p> <input type="submit" value="Edit Subject">  <a href="add_page.php?subj_id=<?= $subj['id']?> "> Add Pages to subject </a></p> 
+
+<!--  -->
+
+<!-- update form -->
+
+
+<input type="hidden" name="subject_id" value="<?= $page['id']?>">
+<input type="hidden" name="page_id" value="">
+<input type="hidden" name="update" value="update">
+     </p>
+<p> <input type="submit" value="update subject"> </p> 
+</form>
+<!-- delete form -->
+<form action="delete_subject.php" method="post">
+<input type="hidden" name="subj_id" value="<?= $subj['id']?>">
+        <input type="submit" value="Delete subject" onclick="return confirm('Are you sure')"> 
 </form>
 
 

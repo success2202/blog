@@ -1,6 +1,6 @@
 <?php 
 include('includes/core/db_connect.php');
-
+$subj_id = $_POST['subject_id'];
 $name = $_POST['menu_name'];
 $position = $_POST['position'];
 $visible = $_POST['visible'];
@@ -9,7 +9,7 @@ $page_id = $_POST['page_id'];
 
 
 function Insert($subj_id, $name,$position, $visible, $content, $con){
-$sql = "INSERT INTO pages VALUES(NULL, $subj_id, '$name',$position, $visible, '$content')";
+$sql = "INSERT INTO pages VALUES(NULL, $subj_id, '$name', $position, $visible, '$content')";
 $chks = mysqli_query($con, $sql);
 
 if($chks){?>
@@ -25,8 +25,6 @@ if($chks){?>
     <?php
 }
 }
-
-
 
 function Update($name,$position, $visible, $content, $page_id){
     global $con;
