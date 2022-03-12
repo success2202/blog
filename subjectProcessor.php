@@ -18,8 +18,8 @@ if(!$chk){
     <?php }
 }
     
-    //update subject function
-    function Update($name,$position, $visible, $subject_id){
+ //update subject function
+ function Update($name,$position, $visible, $subject_id){
         global $con;
         // var_dump($page_id);
         // die();

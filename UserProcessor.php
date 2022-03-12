@@ -54,7 +54,6 @@ function Register($username, $pass, $email){
         $_SESSION['error'] = "Username/Password is Incorrect";
         Header("location:form/login.php");
     }
-
     }
 
 
