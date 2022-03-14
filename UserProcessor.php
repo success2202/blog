@@ -10,13 +10,30 @@ $form_type = $_POST['form_type'];
 // var_dump($form_type);
 // die();
 
+    function redirect($url){
+        Header("Location=$url");
+    }
+
+    function getUserExist($username, $email){
+        global $con;
+        $user = "SELECT * FROM users WHERE `email`='$email' || username='$username' LIMIT 1  ";
+        $uchk = mysqli_query($con, $user);
+        $chks = mysqli_num_rows($uchk);
+        if($uchk){
+            $_SESSION['email'] = "User already exist";
+        }
+        return $chks;
+    }
 
 function Register($username, $pass, $email){
+    $sd =  getUserExist($username, $email);
+    if($sd){
+        return Header("location:form/register.php");
+    }
     global $con;
     $pass = base64_encode($pass);
     $sql = "INSERT INTO users VALUES(NULL, '$username', '$pass',NULL, '$email', NULL, NULL)";
     $chk = mysqli_query($con, $sql);
-   
     if($chk){
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $pass;

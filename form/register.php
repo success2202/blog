@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,8 +31,10 @@
 					</div>
 <button type="submit" class="btn btn-primary">Register</button>
 				</form>
+			
+				<?php if(isset($_SESSION['email'])) echo "<span style=\" color:red \">" .$_SESSION['email'] ."</span>" ?>
+            
 			</div>
             </div>
-
-            </body>
+			</body>
 </html>
