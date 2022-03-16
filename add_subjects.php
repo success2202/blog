@@ -23,10 +23,8 @@
 </p>
 <p>Position: <select name="position"> 
     
-    <?php    $sql = "SELECT * FROM subjects";
-        $chk =mysqli_query($con, $sql);
-        $tik = mysqli_num_rows($chk);
-    
+    <?php    
+            $tik = get_all_subject();
         for($x = 1; $x <= $tik + 1; $x++)
         echo "<option value=\" $x\">".$x."</option>";
         

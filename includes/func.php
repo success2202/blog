@@ -7,6 +7,14 @@ function get_all_subjects(){
   $chk = mysqli_query($con, $subj);
   return $chk;
 }
+
+  function get_all_subject(){
+    global $con;
+    $sql = "SELECT * FROM subjects";
+        $chk =mysqli_query($con, $sql);
+        $tik = mysqli_num_rows($chk);
+        return $tik;
+  }
 function get_pages_for_subject($id){
   global $con;
   $page = "SELECT * FROM pages WHERE subject_id = $id";
